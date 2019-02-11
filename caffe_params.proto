@@ -1,0 +1,72 @@
+optional ChannelTransformParameter channel_transform_param = 187;
+optional GaborParameter gabor_param = 194;
+optional GradientOperatorParameter gradient_operator_param = 192;
+optional PixelShuffleParameter pixel_shuffle_param = 191;
+optional PixelwiseGrammatrixParameter pixelwise_grammatrix_param = 196;
+optional RandomCropDataParameter random_crop_param = 171;
+optional BilinearInterpParameter bilinear_interp_param = 179;
+optional RegionWeightedLossParameter region_weighted_loss_param = 201;
+optional VisualizeParameter visualize_param = 173;
+
+
+message ChannelTransformParameter {
+  repeated double mean = 1;
+  repeated double scale = 2;
+}
+
+message GaborParameter {
+  optional int32 space = 1[default=128];
+  optional double upper_frequency = 2[default=0.8];
+  optional double lower_frequency = 3[default=0.08];
+  optional int32 scale_num =4[default=4];
+  optional int32 orientation =5[default=6];
+  optional bool remove_dc=6[default=false];
+  optional bool show_filters=7[default=true];
+  optional string real_part_path=8;
+  optional string imag_part_path=9;
+  optional int32 x_scale=10[default=1];
+  optional int32 y_scale=11[default=1];
+}
+
+message GradientOperatorParameter {
+  optional int32 kernel_size = 1[default = 5];
+  optional double theta = 2[default = 1.2];
+}
+
+message PixelShuffleParameter {
+  required int32 scale = 1;
+}
+
+message PixelwiseGrammatrixParameter {
+  repeated int32 kernel_size = 1;
+  optional int32 scale =2[default=4];
+}
+
+message RandomCropDataParameter {
+  optional float lower_bound = 1 [default = 256];
+  optional float upper_bound = 2 [default = 480];
+  optional bool center_crop = 3 [default = false];
+}
+
+message BilinearInterpParameter {
+  optional uint32 width = 1[default = 128];
+  optional uint32 height = 2[default = 128];
+  optional double scale = 3[default = 1];
+  optional bool round = 4[default = false];
+}
+
+message RegionWeightedLossParameter {
+  optional int32 kernel_size = 1[default = 5];
+  optional bool inverse = 2[default = false];
+}
+
+message VisualizeParameter {
+  optional int32 width = 1[default=224];
+  optional int32 height = 2[default=224];
+  optional bool gray = 3[default=false];
+  optional double scale = 4[default=255];
+  optional int32 display_interval = 5[default=100];
+  optional string root_folder = 6;
+  optional string label_path = 7; 
+  optional int32 cat_num = 8;   
+}
