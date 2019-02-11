@@ -17,7 +17,7 @@ Department of Computer Science, The University of Hong Kong
 
 ### Introduction
 
-This repository contains the codes and models described in the paper "Image Super-Resolution via Deterministic-Stochastic Synthesis and Local Statistical Rectification"(https://arxiv.org/pdf/1809.06557.pdf). These models are trained and tested on [NTIRE 2017](http://www.vision.ee.ethz.ch/ntire17/) DIV2K super resolution track.
+This repository contains the codes and models described in the paper "Image Super-Resolution via Deterministic-Stochastic Synthesis and Local Statistical Rectification"(https://arxiv.org/pdf/1809.06557.pdf). These models are trained and tested on the dataset of [NTIRE 2017](http://www.vision.ee.ethz.ch/ntire17/) DIV2K super resolution track.
 
 **Note**
 
